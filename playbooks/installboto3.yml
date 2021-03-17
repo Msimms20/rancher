@@ -1,0 +1,9 @@
+- hosts: localhost
+  gather_facts: no
+  vars_files:
+  - /root/cred.yml
+  tasks:
+  - name: "Installing Boto3 library"
+    pip:
+      name: boto
+      state: present
